@@ -18,12 +18,7 @@ app.use(enforceHttps());
 
 //静态网页服务挂载
 app.use(serve({prefix:'/',dir:'./html',preload:false,dynamic:true}));
-/*
-app.use(serve({rootDir: __dirname+ "/html", rootPath:'/h5',index:'index.html',maxage: 30000}));
-app.use(serve({rootDir:__dirname+ "/media/image", rootPath:'/image',maxage:7*24*3600*1000}));
-app.use(serve({rootDir:__dirname+ "/media/video", rootPath:'/video',maxage:7*24*3600*1000}));
-app.use(serve({rootDir:__dirname+ "/media/audio", rootPath:'/audio',maxage:7*24*3600*1000}));
-*/
+
 //上传文件的BODY对象绑定
 app.use(koaBody({ multipart: true }));
 //挂载动态页面
