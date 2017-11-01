@@ -1,6 +1,6 @@
 'use strict';
 var MongoClient = require('mongodb').MongoClient;
-var DB_CONN_STR = 'mongodb://lls:lls2017@localhost:27017/dblls?authSource=admin';
+var DB_CONN_STR = 'mongodb://---:---@localhost:27017/dblls?authSource=admin';
 var con_obj =  'tgoods';
 
 var insertDocuments = function(db, callback) {
