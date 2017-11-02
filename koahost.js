@@ -11,6 +11,12 @@ const router = require("./koarouter.js");
 var io = require("./auction.io.js");
 const koaBody = require('koa-body');
 
+//发生未知意外后不退出进程，保证网站持续运转
+process.on("uncatchException", function (e) {
+    console.log(e);
+    process.exit(1);
+});
+
 var app = new koa();
 
 // Force HTTPS on all page
